@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GorjetaView extends StatelessWidget {
+class GorjetaView extends StatefulWidget {
   const GorjetaView({super.key});
 
+  @override
+  State<GorjetaView> createState() => _GorjetaViewState();
+}
+
+class _GorjetaViewState extends State<GorjetaView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,9 +45,7 @@ class GorjetaView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12.0),
                 ),
               ),
-              onChanged: (value) {
-               
-              },
+              onChanged: (value) {},
             ),
             //
             // PERCENTUAL DE DESCONTO
@@ -54,10 +57,8 @@ class GorjetaView extends StatelessWidget {
                 SizedBox(width: 30),
                 DropdownButton<double>(
                   value: 10,
-                  onChanged: (double? newValue) {
-                    
-                  },
-                  items: [10.0,20.0]
+                  onChanged: (double? newValue) {},
+                  items: [10.0, 20.0]
                       .map<DropdownMenuItem<double>>((double value) {
                     return DropdownMenuItem<double>(
                       value: value,
@@ -80,9 +81,7 @@ class GorjetaView extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               child: Text('calcular'),
             ),
             SizedBox(height: 20),
